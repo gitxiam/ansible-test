@@ -1,0 +1,33 @@
+---
+# tasks file for php_depend
+
+- name: Add remi-php71
+  yum_repository:
+    name: remi-php71
+    description: Remi's PHP 7.1 RPM repository for Enterprise Linux $releasever - $basearch
+    mirrorlist: http://rpms.remirepo.net/enterprise/$releasever/php71/mirror
+    enabled: yes
+    gpgcheck: 1
+    gpgkey: http://rpms.remirepo.net/RPM-GPG-KEY-remi
+
+- name: Add multiple repositories into the same file (1/2)
+  yum_repository:
+    name: epel
+    description: EPEL YUM repo
+    file: external_repos
+    baseurl: https://download.fedoraproject.org/pub/epel/$releasever/$basearch/
+    gpgcheck: no
+
+- name: install utils
+  yum:
+    name: ['yum-utils']
+    state: present
+
+- name: setting php56 library
+  shell: yum-config-manager --enable remi-php56    [Install PHP 5.6]
+
+- name: install packs php mysql
+  yum:
+    name: ['php', 'php-mysql']
+    state: present
+  tags: httpd

@@ -1,0 +1,12 @@
+---
+ - name: Configure NTP on CentOS/RHEL/Debian System
+   become: true
+   hosts: wordpress
+   roles:
+    - bertvv.httpd
+
+ - name: php installing
+   hosts: wordpress
+   roles:
+    - php_depend
+

@@ -1,0 +1,38 @@
+---
+
+- name: Add remi-php56
+  hosts: wordpress
+  yum_repository:
+    name: remi-php56
+    description: Remi's PHP 5.6 RPM repository for Enterprise Linux $releasever - $basearch
+    mirrorlist: http://rpms.remirepo.net/enterprise/remi-release-7.rpm
+    enabled: yes
+    gpgcheck: 1
+    gpgkey: http://rpms.remirepo.net/RPM-GPG-KEY-remi
+
+- name: Add fedora epel 7
+  hosts: wordpress
+  yum_repository:
+    name: remi-release-7
+    mirrorlist: http://rpms.remirepo.net/enterprise/remi-release-7.rpm
+    enabled: yes
+    gpgcheck: 1
+    gpgkey: https://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-7
+	
+- name: install packs
+  hosts: wordpress
+  yum:
+    name: ['yum-utils']
+    state: present
+
+- name: enable remi-php56
+  hosts: wordpress
+  shell: yum-config-manager --enable remi-php71
+
+- name: install packs
+  hosts: wordpress
+  yum:
+    name: ['php', 'php-mysql']
+    state: present
+  tags: httpd
+

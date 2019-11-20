@@ -1,0 +1,6 @@
+---
+ - name: Configure NTP on CentOS/RHEL/Debian System
+   become: true
+   hosts: wordpress
+   roles:
+    - role: bertvv.mariadb

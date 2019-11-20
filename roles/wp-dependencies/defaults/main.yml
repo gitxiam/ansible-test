@@ -1,0 +1,6 @@
+---
+# defaults file for wp-dependencies
+
+  wp_mysql_db: MyWP
+  wp_mysql_user: user_base
+  wp_mysql_password: 12345678
