@@ -11,7 +11,7 @@
   command: "tar xzf /opt/source/wordpress/wordpress.tar.gz -C /var/www/html --strip-components 1"
 
 - name: Send config file
-  copy: src=/root/wp-config-sample.php dest=/var/www/html/wp-config.php mode=0644
+  copy: src=/etc/ansible/roles/wp-install-config/templates/wp-config-sample.php dest=/var/www/html/wp-config.php mode=0644
 
 - name: Final reboot after 20 sec
   reboot:
