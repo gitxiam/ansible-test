@@ -34,5 +34,5 @@ wordpress, копирует в /var/www/html файлы CMS-ки, копируе
 
 ansible-playbook -i hosts playbook_total.yaml
 
-8. Заходим по адресу в hosts: http://142.93.226.6/ и видим пустой сайт на wordpress. 
+8. Заходим по адресу в hosts: http://157.230.113.238/ и видим пустой сайт на wordpress. 
 Первого пользователя Wordpress я настроил сам, больше там ничего интересного нет.
