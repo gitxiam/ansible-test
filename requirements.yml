@@ -1,17 +1,3 @@
-# Install a role from the Ansible Galaxy
-#- src: olibob.apache
-
-#- src: robertdebock.bootstrap
-#- src: robertdebock.epel
-#- src: robertdebock.buildtools
-#- src: robertdebock.python_pip
-
-#- src: robertdebock.httpd
-#- src: amtega.packages
-
-#- src: bertvv.httpd
+- src: bertvv.httpd
 - src: bertvv.mariadb
-- src: geerlingguy.php
-- src: geerlingguy.repo-remi
-- src: geerlingguy.php-versions
-- src: geerlingguy.php-mysql
+
