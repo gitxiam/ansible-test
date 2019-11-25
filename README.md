@@ -21,6 +21,7 @@ ansible-galaxy init php_depend
 Роль добавляет дополнительные репозитории и указывает на желаемую версию php 5.6, затем устанавливается php и php-mysql
 
 6. Роли для установки wordpress создавались следующим способом:
+
 ansible-galaxy init wp-dependencies
 
 ansible-galaxy init wp-install-config
