@@ -2,10 +2,13 @@
  - name: Configure httpd service
    become: true
    hosts: wordpress
+
    roles:
-    - bertvv.httpd
-    - php_depend
-    - bertvv.mariadb
-    - wp-dependencies
-    - wp-install-config
+   - bertvv.httpd
+   - php_depend
+   - bertvv.mariadb
+   - wp-install-config
+   
+   vars_files:
+   - encrypted.yml
 
