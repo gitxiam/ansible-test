@@ -1,2 +1,2 @@
 ---
-# defaults file for php_depend
+php_depend_php_version: 5.6
