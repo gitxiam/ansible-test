@@ -1,6 +1,0 @@
----
-
-- name: Ensure MariaDB is running (and enable it at boot)
-  service: name=mariadb state=started enabled=yes
-
-
