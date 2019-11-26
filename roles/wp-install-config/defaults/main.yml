@@ -1,2 +1,5 @@
 ---
-# defaults file for wp-install-config
+wp_config_db_name: ""
+wp_config_db_user: ""
+wp_config_db_password: ""
+
